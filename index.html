@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Elements and Forms</title>
+    <style>
+        /* Basic styles for table and form */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Style for the form */
+        form {
+            margin: 20px 0;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 400;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Advanced HTML5 Elements and Forms</h1>
+    </header>
+
+    <!-- Ordered List with Roman Numerals -->
+    <section>
+        <h2>Ordered List with Roman Numerals</h2>
+        <ol type="i">
+            <li>Introduction to HTML5</li>
+            <li>Using Forms and Input Types</li>
+            <li>Incorporating Multimedia</li>
+            <li>Responsive Web Design</li>
+            <li>Validation and Accessibility</li>
+        </ol>
+    </section>
+
+    <!-- External Image from Pexels -->
+    <section>
+        <h2>All about Nature</h2>
+        <img src="https://shorturl.at/u3tgl" alt="All about nature" width="300" height="300" />
+    </section>
+
+    <!-- Contact Table -->
+    <section>
+        <h2>Contact Information</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Peter Hudson</td>
+                    <td>123 Main St, Springfield</td>
+                    <td>(555) 123-4567</td>
+                    <td>peterhudson@example.com</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>456 Oak Ave, Riverside</td>
+                    <td>(555) 234-5678</td>
+                    <td>janesmith@example.com</td>
+                </tr>
+                <tr>
+                    <td>George Brown</td>
+                    <td>789 Pine Blvd, Riverton</td>
+                    <td>(555) 345-6789</td>
+                    <td>georgebrown@example.com</td>
+                </tr>
+                <tr>
+                    <td>Amy White</td>
+                    <td>101 Maple Rd, Hilltown</td>
+                    <td>(555) 456-7890</td>
+                    <td>amywhite@example.com</td>
+                </tr>
+                <tr>
+                    <td>Tom Harris</td>
+                    <td>202 Birch Ln, Greenfield</td>
+                    <td>(555) 567-8901</td>
+                    <td>tomharris@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Registration Form -->
+    <section>
+        <h2>Registration Form</h2>
+        <form action="" method="">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <!-- Name Input -->
+                <label for="full_name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                <br><br>
+
+                <!-- Email Input -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <br><br>
+
+                <!-- Password Input -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" 
+                        minlength="8" maxlength="14"  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$" 
+                        title="Password must be atleast 8 characters"required>
+                <br><br>
+
+                <!-- Date of Birth -->
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                <br><br>
+
+                <!-- Dropdown Menu for Country -->
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option>--Select an option--</option>
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">UK</option>
+                    <option value="india">India</option>
+                </select>
+                <br><br>
+
+                <!-- Gender Radio Buttons -->
+                <fieldset>
+                    <legend>Gender</legend>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="other">Other</label>
+                    <input type="radio" id="other" name="gender" value="other" required>
+                </fieldset>
+                <br><br>
+
+                <!-- Checkboxes -->
+                <label for="hobby">Hobbies:</label>
+                <input type="checkbox" name="hobby" value="travel"> Travel
+                <input type="checkbox" name="hobby" value="music"> Music
+                <input type="checkbox" name="hobby" value="reading"> Reading
+                <input type="checkbox" name="hobby" value="swimming"> Swimming
+                <br><br>
+
+                <!-- Submit Button -->
+                <button type="submit">Register</button>
+                <input type="reset" value="Cancel/Reset">
+            </fieldset>
+        </form>
+    </section>
+
+    <!-- Multimedia Section (Audio and Video) -->
+    <section>
+        <h2>Multimedia Elements</h2>
+        
+        <!-- Audio Player -->
+        <h3>Audio:</h3>
+        <audio controls>
+            <source src="https://shorturl.at/IOrPH" type="audio/mp3" autoplay>
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Video Player -->
+        <h3>Video:</h3>
+        <video controls width="640" height="360" autoplay loop>
+            <source src="https://shorturl.at/61tfg" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+</body>
+
+</html>
